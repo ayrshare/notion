@@ -4,7 +4,8 @@ const moment = require('moment');
 dotenv.config();
 
 const API_KEY = process.env.API_KEY;
-const databaseId = process.env.NOTION_DATABASE_ID;
+const DATABASE_ID = process.env.NOTION_DATABASE_ID;
+const NOTION_KEY = process.env.NOTION_KEY;
 
 const sendPost = async (data) => {
     const { post, platforms, imageUrls, profileKeys, scheduleDate, shortenLinks } = data;
@@ -49,12 +50,12 @@ const getPostsFromNotion = async () => {
     };
 
     while (true) {
-        const { results, next_cursor } = await fetch(`https://api.notion.com/v1/databases/${databaseId}/query`, {
+        const { results, next_cursor } = await fetch(`https://api.notion.com/v1/databases/${DATABASE_ID}/query`, {
             method: 'POST',
             body: JSON.stringify(body),
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${process.env.NOTION_KEY}`,
+                'Authorization': `Bearer ${NOTION_KEY}`,
                 'Notion-Version': '2022-06-28'
             }
         }).then(res => res.json());
@@ -77,7 +78,7 @@ const getPostsFromNotion = async () => {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${process.env.NOTION_KEY}`,
+                'Authorization': `Bearer ${NOTION_KEY}`,
                 'Notion-Version': '2022-06-28'
             }
         }).then(res => res.json());
@@ -129,7 +130,7 @@ const makePostsFromNotion = async () => {
                 body: JSON.stringify(body),
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${process.env.NOTION_KEY}`,
+                    'Authorization': `Bearer ${NOTION_KEY}`,
                     'Notion-Version': '2022-06-28'
                 }
             });
