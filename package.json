@@ -1,4 +1,31 @@
 {
+  "name": "notion-social",
+  "version": "1.0",
+  "description": "Post from Notion to Twitter, Instagram, Facebook Pages, Facebook Groups, LinkedIn, YouTube, Google My Business, Reddit, TikTok, and Telegram.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayrshare/notion"
+  },
+  "keywords": [
+    "Ayrshare",
+    "Notion",
+    "Social Media",
+    "Social Networks",
+    "Social Networking",
+    "Social Posting",
+    "Social Media API",
+    "Social API",
+    "API Social Post",
+    "Automation",
+    "Automate Social Post",
+    "No-Code",
+    "Nocode"
+  ],
+  "author": "Ayrshare",
+  "url": "https://www.ayrshare.com",
+  "license": "MIT",
+  "homepage": "https://www.ayrshare.com",
   "dependencies": {
     "dotenv": "^16.0.3",
     "moment": "^2.29.4"
