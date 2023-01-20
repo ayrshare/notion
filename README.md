@@ -56,4 +56,4 @@ Make sure to set the following environment variables used in the script:
 * NOTION_DATABASE_ID: Open the database you created earlier in this page and get the database ID from the URL. It will be in this format: https://www.notion.so/<NOTION_DATABASE_ID>?v=ee9f65a4afb24033813f245a45bc9e83
 * NOTION_KEY: internal integration token from earlier
 
-Run the script. You can run it at [Heroku] (https://www.heroku.com/), [Digital Ocean](https://www.digitalocean.com/), or [Vercel](https://vercel.com/) for example. If successful, all ‘pending’ status columns will be changed to ‘success’ and the posts will have been made to the appropriate social networks.
+Run the script. You can run it at [Heroku](https://www.heroku.com/), [Digital Ocean](https://www.digitalocean.com/), or [Vercel](https://vercel.com/) for example. If successful, all ‘pending’ status columns will be changed to ‘success’ and the posts will have been made to the appropriate social networks.
